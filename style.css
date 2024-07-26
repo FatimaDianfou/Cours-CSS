@@ -5,10 +5,11 @@
 }
 
 /*L'etoile donne du style a tous les elements*/
-/* * {
+ /* *{ */
     margin: 0;
     padding: 0;
-} */
+    border: 2px solid red ;
+/* }  */
 
 /*la police c'est DMSerif et le deuxieme c'est verdana*/
 body {
@@ -20,9 +21,9 @@ body {
 }
 
 h1 {
-/*permet de mettre le texte en majuscule*/
+/* h1: permet de mettre le texte en majuscule*/
     text-transform: uppercase;
-/*permet d'espacer le texte*/
+/*letter-spacing:permet d'espacer le texte*/
     letter-spacing: 3px;
 /*permet de centrer le texte*/
     text-align: center;
@@ -92,9 +93,12 @@ h2 {
 }
 
 .grid img {
-    width: 80px;
+    width: 80%;
     margin: 20px auto;
-    display: block;
+    display: block; 
+    
+    
+    
 } 
 /*Le formulaire*/
 form {
@@ -122,7 +126,7 @@ textarea {
     resize: none;
 }
 #btn-submit {
-    grid-area: btn;
+    grid-area: bt;
     cursor: pointer;
     background: cyan;
     transition: 0.2s;
@@ -160,24 +164,32 @@ frontieres */
 }
 
 /* Responsive */
+/* max-width veut dire hauteur maximale */
 @media screen and (max-width: 900px) {
     .grid-container {
         display: block;
     }
     .grid-container img {
-        width: 40px;
+        width: 40%;
 
     }    
 }
 @media screen and (max-width: 610px) {
+    .flexbox ul {
+        flex-direction: column;
+        align-items: center;
+    }
     form {
         grid-template-columns: 1fr;
-        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas: 
         "i1"
         "i2"
         "ta"
         "bt";
+    }
+    input, textarea {
+        font-size: 0.8rem;
     }
 }
   
